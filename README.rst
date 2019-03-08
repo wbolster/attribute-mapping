@@ -44,7 +44,7 @@ Now you can access the contents using attribute lookups::
     del x.foo
 
 In addition to attribute access, subscription (``__getitem__`` and
-friends) containment checks also work::
+friends) and containment checks (``in``) also work::
 
     x["a"]  # gives 1
     x["b"]["c"]  # gives 2
