@@ -11,6 +11,11 @@ def test_get_original():
     assert vars(x) is d
 
 
+def test_constructor_invalid():
+    with pytest.raises(TypeError):
+        AttributeMapping(123)
+
+
 def test_attributes():
     d = {"a": 1, "b": {"c": 2, "d": 3}}
     x = AttributeMapping(d)
@@ -28,6 +33,9 @@ def test_attributes():
 
     del x.foo
     assert not hasattr(x, "foo")
+
+    with pytest.raises(AttributeError):
+        del x.nonexistent
 
 
 def test_items():
