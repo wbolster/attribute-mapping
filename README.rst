@@ -11,8 +11,8 @@ Really? Another implementation?
 
 Compared to many other implementations of the same idea, going by
 names such as ``AttrDict`` and various others, this library is
-extremely minimal, to the point that it has _no_ restrictions, _no_
-surprises and virtually _no_ API.
+extremely minimal, to the point that it has *no* restrictions, *no*
+surprises and virtually *no* API.
 
 
 Installation
@@ -52,7 +52,7 @@ friends) and containment checks (``in``) also work::
     "foo" in x  # True
     del x["foo"]
 
-However, there are _no_ other dict-like methods or reserved names, so
+However, there are *no* other dict-like methods or reserved names, so
 you can happily use attributes like ``keys`` and ``items``::
 
     x.items = [1, 2, 3]
