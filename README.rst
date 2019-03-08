@@ -77,11 +77,11 @@ Credits
 This library is written by wouter bolsterlee (wbolster).
 
 There are a gazillion similar implementations, so the author thanks
-the whole Fython community for the inspiration to make yet another
+the whole Python community for the inspiration to make yet another
 implementation of this idea.
 
 
 License
 =======
 
-BSD; see LICENSE.rst.
+BSD; see LICENSE file for details.
