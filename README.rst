@@ -91,6 +91,18 @@ the whole Python community for the inspiration to make yet another
 implementation of this idea.
 
 
+Version history
+===============
+
+* 1.1.0 (2019-03-09)
+
+  * Add support for custom mappings
+
+* 1.0.0 (2019-03-08)
+
+  * Initial release
+
+
 License
 =======
 
