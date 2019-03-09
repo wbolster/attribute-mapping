@@ -17,7 +17,7 @@ class AttributeMapping:
         try:
             value = self[name]
         except KeyError as exc:
-            raise AttributeError(exc.args[0]) from None
+            raise AttributeError(exc.args[0] if exc.args else name) from None
         if isinstance(value, _collections.abc.Mapping):
             value = AttributeMapping(value)
         return value
