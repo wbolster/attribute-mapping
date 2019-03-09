@@ -9,7 +9,7 @@ setup(
     name="attribute-mapping",
     description="minimal attrdict implementation",
     long_description=long_description,
-    version="1.0.0",
+    version="1.1.0",
     author="wouter bolsterlee",
     author_email="wouter@bolsterl.ee",
     url="https://github.com/wbolster/attribute-mapping",
