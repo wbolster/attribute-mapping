@@ -1,3 +1,5 @@
+import collections
+
 import pytest
 
 from attribute_mapping import AttributeMapping
@@ -86,3 +88,28 @@ def test_special_attributes():
     x = AttributeMapping(d)
     assert x.__class__ is AttributeMapping
     assert x.__dict__ is d
+
+
+class MyCustomMapping(collections.abc.Mapping):
+    def __getitem__(self, key):
+        if key == "a":
+            return "aa"
+        if key == "b":
+            return "bb"
+        raise KeyError
+
+    def __iter__(self):
+        yield "a"
+        yield "b"
+
+    def __len__():
+        return 2
+
+
+def test_custom_mapping():
+    m = MyCustomMapping()
+    x = AttributeMapping(m)
+    assert x.a == "aa"
+    assert x.b == "bb"
+    with pytest.raises(AttributeError):
+        x.c
