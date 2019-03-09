@@ -3,15 +3,18 @@ attribute-mapping
 =================
 
 ``attribute-mapping`` is a minimalistic python library to allow
-attribute lookups in dictionaries.
+attribute lookups in dictionaries and other mappings.
 
 Compared to many other implementations of the same idea, going by
 names such as ``AttrDict`` and various others, this library is
 extremely minimal and free of cruft:
 
-- ALmost no API
+- Almost no API
 
 - ``AttributeMapping`` instances do not pretend to be a ``dict``
+
+- Can be used with ``dict`` as well as other objects implementing the
+  ``collections.abc.Mapping`` abstract base class.
 
 - No restrictions on key/attribute names
 
@@ -33,7 +36,8 @@ Installation
 Usage
 =====
 
-Make an ``AttributeMapping`` instance by passing a dictionary::
+Make an ``AttributeMapping`` instance by passing a dictionary or
+another mapping::
 
     from attribute_mapping import AttributeMapping
 
