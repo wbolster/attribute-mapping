@@ -2,16 +2,16 @@ import collections as _collections
 
 
 class AttributeMapping:
-    def __init__(self, d):
-        if not isinstance(d, _collections.abc.Mapping):
+    def __init__(self, mapping):
+        if not isinstance(mapping, _collections.abc.Mapping):
             raise TypeError("not a mapping")
-        object.__setattr__(self, "__dict__", d)
+        object.__setattr__(self, "mapping", mapping)
 
     def __getattribute__(self, name):
         # __dict__ and __class__ are the only special attributes
         # https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy
         if name == "__dict__":
-            return object.__getattribute__(self, "__dict__")
+            return object.__getattribute__(self, "mapping")
         elif name == "__class__":
             return type(self)
         try:
@@ -34,16 +34,16 @@ class AttributeMapping:
             raise AttributeError(exc.args[0]) from None
 
     def __getitem__(self, key):
-        d = object.__getattribute__(self, "__dict__")
-        return d[key]
+        mapping = object.__getattribute__(self, "mapping")
+        return mapping[key]
 
     def __setitem__(self, name, value):
-        d = object.__getattribute__(self, "__dict__")
-        d[name] = value
+        mapping = object.__getattribute__(self, "mapping")
+        mapping[name] = value
 
     def __delitem__(self, name):
-        d = object.__getattribute__(self, "__dict__")
-        del d[name]
+        mapping = object.__getattribute__(self, "mapping")
+        del mapping[name]
 
     def __contains__(self, name):
         try:
@@ -54,9 +54,9 @@ class AttributeMapping:
             return True
 
     def __iter__(self):
-        d = object.__getattribute__(self, "__dict__")
-        yield from d.items()
+        mapping = object.__getattribute__(self, "mapping")
+        yield from mapping.items()
 
     def __repr__(self):
-        d = object.__getattribute__(self, "__dict__")
-        return "{}({!r})".format(type(self).__name__, d)
+        mapping = object.__getattribute__(self, "mapping")
+        return "{}({!r})".format(type(self).__name__, mapping)
