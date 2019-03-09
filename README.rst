@@ -14,11 +14,11 @@ extremely minimal and free of cruft:
 - ``AttributeMapping`` instances do not pretend to be a ``dict``
 
 - Can be used with ``dict`` as well as other objects implementing the
-  ``collections.abc.Mapping`` abstract base class.
+  ``collections.abc.Mapping`` abstract base class
 
 - No restrictions on key/attribute names
 
-- No unpleasant surprises in behaviour or weird corner cases.
+- No unpleasant surprises in behaviour or weird corner cases
 
 - Modern code; Python 3.4+ only
 
