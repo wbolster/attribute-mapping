@@ -94,6 +94,10 @@ implementation of this idea.
 Version history
 ===============
 
+* 1.2.0 (2019-03-12)
+
+  * Add support for (in)equality tests
+
 * 1.1.0 (2019-03-09)
 
   * Add support for custom mappings
