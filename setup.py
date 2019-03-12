@@ -7,7 +7,10 @@ with open(os.path.join(os.path.dirname(__file__), "README.rst")) as fp:
 
 setup(
     name="attribute-mapping",
-    description="minimal attrdict implementation",
+    description=(
+        "minimalistic library for attribute-based "
+        "access to dictionaries and other mappings"
+    ),
     long_description=long_description,
     version="1.2.0",
     author="wouter bolsterlee",

@@ -2,8 +2,8 @@
 attribute-mapping
 =================
 
-``attribute-mapping`` is a minimalistic python library to allow
-attribute lookups in dictionaries and other mappings.
+``attribute-mapping`` is a minimalistic Python library for
+attribute-based access to dictionaries and other mappings.
 
 Compared to many other implementations of the same idea, going by
 names such as ``AttrDict`` and various others, this library is
