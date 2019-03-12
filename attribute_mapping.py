@@ -60,3 +60,10 @@ class AttributeMapping:
     def __repr__(self):
         mapping = object.__getattribute__(self, "mapping")
         return "{}({!r})".format(type(self).__name__, mapping)
+
+    def __eq__(self, other):
+        if not isinstance(other, type(self)):
+            return NotImplemented
+        mapping = object.__getattribute__(self, "mapping")
+        other_mapping = object.__getattribute__(other, "mapping")
+        return mapping == other_mapping

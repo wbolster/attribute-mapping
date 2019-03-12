@@ -90,6 +90,17 @@ def test_special_attributes():
     assert x.__dict__ is d
 
 
+def test_equality():
+    d1 = {"a": "aa"}
+    d2 = {"a": "aa"}
+    d3 = {"b": "b"}
+
+    assert AttributeMapping(d1) == AttributeMapping(d1)
+    assert AttributeMapping(d1) != d1
+    assert AttributeMapping(d1) == AttributeMapping(d2)
+    assert AttributeMapping(d1) != AttributeMapping(d3)
+
+
 class MyCustomMapping(collections.abc.Mapping):
     def __getitem__(self, key):
         if key == "a":
