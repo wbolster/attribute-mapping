@@ -53,6 +53,10 @@ class AttributeMapping:
         else:
             return True
 
+    def __len__(self):
+        mapping = object.__getattribute__(self, "mapping")
+        return len(mapping)
+
     def __iter__(self):
         mapping = object.__getattribute__(self, "mapping")
         yield from mapping.items()

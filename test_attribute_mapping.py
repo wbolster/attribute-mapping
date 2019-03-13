@@ -83,6 +83,14 @@ def test_iteration():
     assert sorted(x) == [("a", 1), ("b", 2)]
 
 
+def test_length():
+    d = {"a": 1, "b": 2}
+    x = AttributeMapping(d)
+    assert len(x) == 2
+    x.c = 3
+    assert len(x) == 3
+
+
 def test_special_attributes():
     d = {"foo": "bar"}
     x = AttributeMapping(d)
