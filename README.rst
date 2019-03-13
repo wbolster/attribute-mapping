@@ -81,6 +81,14 @@ Finally, to obtain the original object that was used for the
     vars(x) is d  # True
 
 
+Caveats
+=======
+
+The attribute names ``__class__`` and ``__dict__`` are reserved in
+Python. If you really must use these names, use ``x["__class__"]`` and
+``x["__dict__"]`` instead.
+
+
 Credits
 =======
 
