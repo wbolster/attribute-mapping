@@ -94,6 +94,10 @@ implementation of this idea.
 Version history
 ===============
 
+* 1.3.0 (2019-03-13)
+
+  * Add support for ``len()``
+
 * 1.2.0 (2019-03-12)
 
   * Add support for (in)equality tests

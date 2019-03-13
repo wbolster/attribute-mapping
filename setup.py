@@ -12,7 +12,7 @@ setup(
         "access to dictionaries and other mappings"
     ),
     long_description=long_description,
-    version="1.2.0",
+    version="1.3.0",
     author="wouter bolsterlee",
     author_email="wouter@bolsterl.ee",
     url="https://github.com/wbolster/attribute-mapping",
