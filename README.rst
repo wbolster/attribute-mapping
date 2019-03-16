@@ -2,6 +2,9 @@
 attribute-mapping
 =================
 
+.. image:: https://travis-ci.org/wbolster/attribute-mapping.svg?branch=master
+    :target: https://travis-ci.org/wbolster/attribute-mapping
+
 ``attribute-mapping`` is a minimalistic Python library for
 attribute-based access to dictionaries and other mappings.
 
