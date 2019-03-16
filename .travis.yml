@@ -1,5 +1,10 @@
 dist: xenial
 group: travis_latest
+
+branches:
+  only:
+  - master
+
 language: python
 
 matrix:
